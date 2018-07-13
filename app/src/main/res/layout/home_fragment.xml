@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="HomeFragmentBinding">
+
+        <variable
+            name="homeFragment"
+            type="com.lelocabdriver.home.HomeFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/app_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/commonTextViewMedium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_weight="1"
+                android:background="@drawable/earnings_selector"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_16dp"
+                android:drawableTop="@drawable/earnings"
+                android:gravity="center"
+                android:onClick="@{homeFragment.onClickEarnings}"
+                android:padding="@dimen/_16dp"
+                android:text="@string/earnings"
+                android:textColor="@android:color/white" />
+
+            <Button
+                style="@style/commonTextViewMedium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_weight="1"
+                android:background="@drawable/accounts_selector"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_8dp"
+                android:drawableTop="@drawable/accounts"
+                android:gravity="center"
+                android:onClick="@{homeFragment.onClickAccounts}"
+                android:padding="@dimen/_16dp"
+                android:text="@string/accounts"
+                android:textColor="@android:color/white" />
+
+            <Button
+                style="@style/commonTextViewMedium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_weight="1"
+                android:background="@drawable/ratings_selector"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_16dp"
+                android:drawableTop="@drawable/rating"
+                android:gravity="center"
+                android:onClick="@{homeFragment.onClickRating}"
+                android:padding="@dimen/_16dp"
+                android:text="@string/ratings"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <Button
+                style="@style/commonTextViewMedium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_weight="1"
+                android:background="@drawable/scheduled_rides_selector"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_8dp"
+                android:drawableTop="@drawable/schedule"
+                android:gravity="center"
+                android:onClick="@{homeFragment.onClickScheduledRide}"
+                android:padding="@dimen/_16dp"
+                android:text="@string/scheduled_n_rides"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/_16dp">
+
+            <TextView
+                style="@style/commonTextViewMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/availability"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/txtServiceName"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_selector_online_offline"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/online"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

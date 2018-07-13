@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">LeloCabDriver</string>
+    <string name="android_api_key">AIzaSyC02xseYYm5WScgpN8r0qAqfLmtJ4ZG9fs</string>
+
+    <!--navigation screen-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">SignUp</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="name">Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+
+
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="your_rides">Your Rides</string>
+    <string name="earnings">Earnings</string>
+    <string name="ratings">Ratings</string>
+    <string name="accounts">Accounts</string>
+    <string name="last_trip">Last Trip</string>
+    <string name="availability">Availability</string>
+    <string name="online">Online</string>
+    <string name="scheduled_n_rides">Scheduled \n Rides</string>
+    <string name="scheduled_rides">Scheduled Rides</string>
+
+
+    <string name="contact_number_validation">Please enter contact number to continue</string>
+    <string name="correct_contact_number_validation">Please enter correct contact number to continue</string>
+    <string name="password_validation">Please enter password to continue</string>
+    <string name="name_validation">Please enter name to continue</string>
+    <string name="email_validation">Please enter email to continue</string>
+    <string name="confirm_password_validation">Please enter confirm password to continue</string>
+    <string name="password_not_match_validation">password not match</string>
+    <string name="correct_email_validation">Please enter correct email address to continue</string>
+    <string name="start_now">Start Now</string>
+    <string name="source_address">Source Address</string>
+    <string name="destination_address">Destination Address</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="date">Date</string>
+    <string name="schedule_detail">Schedule Detail</string>
+    <string name="total_earnings">Total Earnings</string>
+    <string name="remaining_amount">Remaining Amount</string>
+    <string name="cancel">Cancel</string>
+    <string name="complete_ride">Complete Ride</string>
+    <string name="base_fare">Base Fare</string>
+    <string name="ride_fare">Ride Fare</string>
+    <string name="total_time">Total Time</string>
+    <string name="waiting_amount">Waiting Amount</string>
+    <string name="service_tax">Service Tax</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="distance">Distance</string>
+    <string name="finish">Finish</string>
+    <string name="server_exception">something went wrong please try again...</string>
+    <string name="today_s_ride_hours">Today\'s Ride Hours</string>
+    <string name="current_month_ride_hours">Current Month Ride Hours</string>
+    <string name="today_s_login_hours">Today\'s Login Hours</string>
+    <string name="current_month_login_hours">Current Month Login Hours</string>
+    <string name="today_s_distance">Today\'s Distance</string>
+    <string name="current_month_distance">Current Month Distance</string>
+    <string name="today_s_income">Today\'s Income</string>
+    <string name="current_month_income">Current Month Income</string>
+    <string name="otp">Otp</string>
+    <string name="enter_opt_here">Enter Opt here</string>
+    <string name="otp_validation">Please enter otp to continue</string>
+    <string name="lelo_money">Lelo Money</string>
+    <string name="licence_number">Licence Number</string>
+    <string name="rc_number">Rc Number</string>
+    <string name="father_s_name">Father\'s Name</string>
+    <string name="vehicle_detail">Vehicle Detail</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="vehicle_type">Vehicle type</string>
+    <string name="vehicle_number">Vehicle Number</string>
+    <string name="profile">Profile</string>
+    <string name="logout_confirmation_message">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cin_number_u63013rj2017ptc057202">CIN Number U63013RJ2017PTC057202</string>
+    <string name="pan_number_aadcl2331f">Pan number AADCL2331F</string>
+    <string name="service_tax_number_aadcl2331fsd001">Service tax number AADCL2331FSD001</string>
+    <string name="wallet_payment">Wallet Payment</string>
+    <string name="cash_payment">Cash Payment</string>
+    <string name="haryana">Haryana</string>
+    <string name="up">Uttar Pradesh</string>
+    <string name="extra_amount">Extra Amount</string>
+</resources>

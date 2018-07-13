@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="SignUpRequestModel"
+            type="com.lelocabdriver.signup.SignUpRequestModel" />
+
+        <variable
+            name="presenter"
+            type="com.lelocabdriver.signup.ISignUpPresenter" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_bg"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_40dp"
+                    android:layout_marginTop="@dimen/_40dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <EditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:hint="@string/name"
+                    android:text="@={SignUpRequestModel.userName}" />
+
+                <EditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:hint="@string/contact_number"
+                    android:text="@={SignUpRequestModel.contactNumber}" />
+
+                <EditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:hint="@string/email"
+                    android:text="@={SignUpRequestModel.email}" />
+
+                <EditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:hint="@string/password"
+                    android:text="@={SignUpRequestModel.password}" />
+
+                <EditText
+                    style="@style/edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:hint="@string/confirm_password"
+                    android:text="@={SignUpRequestModel.confirmPassword}" />
+
+                <Button
+                    style="@style/sign_up_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:onClick="@{()->presenter.onSignUpClick(SignUpRequestModel)}"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

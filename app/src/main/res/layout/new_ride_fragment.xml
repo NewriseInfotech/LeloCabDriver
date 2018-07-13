@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="NewRideFragmentBinding">
+
+        <variable
+            name="rideInfoModel"
+            type="com.lelocabdriver.notification.RideInfoModel" />
+
+        <variable
+            name="presenter"
+            type="com.lelocabdriver.newride.INewRideFragmentPresenter" />
+
+        <variable
+            name="newRideFragment"
+            type="com.lelocabdriver.newride.NewRideFragment" />
+
+        <variable
+            name="otp"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_16dp">
+
+            <ImageView
+                android:id="@+id/imv_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:onClick="@{newRideFragment.onNavigationClick}"
+                android:padding="@dimen/_4dp"
+                android:src="@drawable/navigation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/commonTextViewSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{rideInfoModel.Name}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/commonTextViewSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/email" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{rideInfoModel.Email}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/commonTextViewSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/contact_number" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{rideInfoModel.PhoneNumber}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/commonTextViewSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/source_address" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{rideInfoModel.SourceAddress}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/commonTextViewSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/destination_address" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{rideInfoModel.DestinationAddress}" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/edit_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:background="@drawable/edittext_shape"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:hint="@string/enter_opt_here"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="@={otp}"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="@{rideInfoModel.rideStatus==1 ? View.VISIBLE : View.GONE }">
+
+            <Button
+                android:id="@+id/btn_cancel_request"
+                style="@style/commonTextViewLarge"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="@{()->presenter.CancelRide(rideInfoModel)}"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_Accept"
+                style="@style/commonTextViewLarge"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:onClick="@{()->presenter.AcceptRide(rideInfoModel)}"
+                android:text="@string/accept"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_start_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+
+            android:visibility="@{rideInfoModel.rideStatus==2 ? View.VISIBLE : View.GONE }">
+
+            <Button
+                android:id="@+id/btn_Cancel"
+                style="@style/commonTextViewLarge"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="@{()->presenter.CancelRide(rideInfoModel)}"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_start_now"
+                style="@style/commonTextViewLarge"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:onClick="@{()->presenter.StartRide(rideInfoModel , otp)}"
+                android:text="@string/start_now"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_complete"
+            style="@style/commonTextViewLarge"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_40dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="@{()->presenter.CompleteRide(rideInfoModel)}"
+            android:text="@string/complete_ride"
+            android:textColor="@android:color/white"
+            android:visibility="@{rideInfoModel.rideStatus==6 ? View.VISIBLE : View.GONE }" />
+    </RelativeLayout>
+
+</layout>
